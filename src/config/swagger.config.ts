@@ -12,7 +12,7 @@ export const swaggerConfig = new DocumentBuilder()
         },
         "jwt-auth",
     )
-    .setTitle("Data Shop API")
-    .setDescription("Data Shop API description")
+    .setTitle("E commerce API")
+    .setDescription("E commerce API description")
     .setVersion("1.0")
     .build();
