@@ -60,7 +60,7 @@ export class AuthService {
 
             if (!user) throw new BadRequestException("Could not create user");
 
-            return user;
+            return await this.validateUser({ username, password });
         } catch {
             throw new BadRequestException("Could not create user");
         }
