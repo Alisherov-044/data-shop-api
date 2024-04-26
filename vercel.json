@@ -1,24 +1,22 @@
 {
     "version": 2,
+    "env": {
+        "PORT": "@PORT",
+        "DATABASE_URL": "@DATABASE_URL",
+        "DATABASE_URL_UNPOOLED": "@DATABASE_URL_UNPOOLED",
+        "JWT_SECRET": "@JWT_SECRET"
+    },
     "builds": [
         {
-            "src": "dist/main.js",
+            "src": "src/main.ts",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "dist/main.js",
-            "methods": [
-                "GET",
-                "POST",
-                "PUT",
-                "PATCH",
-                "DELETE",
-                "HEAD",
-                "OPTIONS"
-            ]
+            "dest": "src/main.ts",
+            "methods": ["GET", "POST", "PATCH", "DELETE"]
         }
     ]
 }
